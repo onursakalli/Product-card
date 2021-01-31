@@ -1,0 +1,143 @@
+*{
+    margin: unset;
+    padding: unset;
+}
+body {
+    padding: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.product-card {
+    width: 383px;
+    height: 585;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.product-name > h2 {
+    font-weight: normal;
+    color: #707070;
+    font-size: 30px;
+}
+.product-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.product-colors {
+    display: flex;
+}
+.color-text-box {
+    margin-top: 15px;
+    visibility: hidden;
+}
+.color-text {
+    font-size: 12px;
+}
+.product-color-box {
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor:pointer;
+    font-size:22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top:0;
+    left:0;
+    height:30px;
+    width:30px;
+    background-color: #aaaeb1;
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px hsl(0deg 0% 100% / 0%), 0 0 0 4px hsl(0deg 0% 84% / 0%), inset 0 2px 2px 0 rgb(0 0 0 / 20%);
+    border: solid 1px white;
+}
+.silver {
+    background-color: #dddfde !important;
+}
+
+.container:hover input ~ .checkmark {
+    border-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    border: solid 2px #0271ca
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.product-info-detail {
+    font-weight: normal;
+    color: #707070;
+    font-size:20px;
+    text-align: center;
+    margin-top:10px;
+}
+.product-price-box {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:40px;
+    width: 100%;
+}
+
+.product-price-box > div > span {
+    font-size: 30px;
+}
+
+.product-price-box > div > button {
+    font-size: 16px;
+    padding: 10px;
+    border: solid 2px #aaaeb1;
+    border-radius: 99px;
+    background-color: transparent;
+    color: #aaaeba;
+    width: 150px;
+    cursor:pointer;
+    transition: background-color 1000ms;
+    outline: none;
+}
+
+.product-price-box > div > button:hover {
+    background-color: black;
+    border: solid 2px black;
+    color: #fafafa;
+}
